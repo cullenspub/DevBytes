@@ -23,6 +23,10 @@ apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 28
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
     defaultConfig {
         applicationId "com.example.android.devbyteviewer"
         minSdkVersion 19
@@ -47,7 +51,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$version_kotlin"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$version_kotlin"
 
     // Support libraries
     implementation "androidx.appcompat:appcompat:$version_appcompat"
@@ -68,20 +72,19 @@ dependencies {
     // Retrofit for networking
     implementation "com.squareup.retrofit2:retrofit:$version_retrofit"
     implementation "com.squareup.retrofit2:converter-moshi:$version_retrofit"
-    implementation "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$version_retrofit_coroutines_adapter"
 
     // Moshi for parsing the JSON format
-    implementation "com.squareup.moshi:moshi:$version_moshi"
+//    implementation "com.squareup.moshi:moshi:$version_moshi"
     implementation "com.squareup.moshi:moshi-kotlin:$version_moshi"
 
-    // Joda time library for dealing with time
-    implementation "joda-time:joda-time:$version_joda"
+//    // Joda time library for dealing with time
+//    implementation "joda-time:joda-time:$version_joda"
 
     // ViewModel and LiveData (arch components)
     implementation "androidx.lifecycle:lifecycle-extensions:$version_lifecycle_extensions"
 
     // Logging
-    implementation "com.jakewharton.timber:timber:$version_timber"
+//    implementation "com.jakewharton.timber:timber:$version_timber"
 
     // Glide for images
     implementation "com.github.bumptech.glide:glide:$version_glide"

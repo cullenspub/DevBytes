@@ -3,6 +3,18 @@
 Kotlin programming in Android
 
 ## Things I learned doing this
+DEX Declutter to remove extraneous dependencies,  
+Cache Strategies,  
+- Files,  
+- SharedPreferences,  
+- Database,  
+DTO - Data Transfer Objects,  
+Domain Objects,  
+@Insert(OnConflictStrategy),  
+lateinit var have ::INSTANCE.isInstantiated
+Repository Pattern,  
+Spread Operator In Kotlin *,  
+WorkManager
 
 ### Prerequisites
 N/A

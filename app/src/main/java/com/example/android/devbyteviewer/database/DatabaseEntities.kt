@@ -17,3 +17,31 @@
 
 package com.example.android.devbyteviewer.database
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import com.example.android.devbyteviewer.domain.Video
+
+@Entity
+data class DatabaseVideo constructor(
+        @PrimaryKey
+        val url: String,
+        val updated: String,
+        val title: String,
+        val description: String,
+        val thumbnail: String
+)
+
+
+// Extension function to parameterized List Convert DataTransferObject to Domain object
+fun List<DatabaseVideo>.asDomainObject(): List<Video> {
+    return map {
+        Video(
+                description = it.description,
+                thumbnail = it.thumbnail,
+                title = it.title,
+                updated = it.updated,
+                url = it.url
+        )
+    }
+
+}
